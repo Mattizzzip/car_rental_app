@@ -3,6 +3,7 @@ import 'package:car_rental_app/core/buttons/slider_button.dart';
 import 'package:car_rental_app/core/buttons/manufacturer_button.dart';
 import 'package:flutter/material.dart';
 
+import 'config/app_router.dart';
 import 'core/auth_row.dart';
 import 'core/buttons/default_button.dart';
 import 'core/credit_card_panel.dart';
@@ -20,13 +21,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      title: "car rent",
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: LoadingPage(),
+      routerConfig: appRouter,
     );
   }
 }
